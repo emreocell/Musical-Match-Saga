@@ -50,6 +50,10 @@ export function updateObjectiveCounters(objectiveCountersContainer, objectives, 
   objectiveCountersContainer.innerHTML = objectives
     .map(obj => {
       const left = state[obj.label + 'Left'] ?? obj.count;
+      if (left <= 0) {
+        const name = obj.label.charAt(0).toUpperCase() + obj.label.slice(1);
+        return `<span class="done" role="img" aria-label="${name}: done"><span class="objective-symbol">${obj.symbol}</span>: ✓</span>`;
+      }
       return `<span>${obj.symbol}: ${left}</span>`;
     })
     .join('');

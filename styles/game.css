@@ -337,6 +337,19 @@
   white-space: nowrap;
 }
 
+/* A finished objective: green, with the instrument faded and a tick instead of 0 */
+#objective-counters .done {
+  color: #1b5e20;
+  background: #d8f3dc;
+  border-radius: 10px;
+  padding: 2px 8px;
+}
+
+#objective-counters .done .objective-symbol {
+  padding: 0;
+  opacity: 0.5;
+}
+
 /* =========================
    RESPONSIVE — TABLET & DESKTOP
    min-width: 768px

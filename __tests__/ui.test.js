@@ -28,6 +28,33 @@ describe('UI functions', () => {
     expect(container.children[1].textContent).toBe('🔵: 1');
   });
 
+  test('updateObjectiveCounters marks an objective as done when it reaches zero', () => {
+    const container = document.createElement('div');
+    const objectives = [
+      { label: 'violin', symbol: '🎻', count: 5 },
+      { label: 'piano', symbol: '🎹', count: 3 }
+    ];
+    updateObjectiveCounters(container, objectives, { violinLeft: 0, pianoLeft: 2 });
+    const [violin, piano] = container.children;
+    expect(violin.classList.contains('done')).toBe(true);
+    expect(violin.textContent).toBe('🎻: ✓');
+    expect(violin.getAttribute('aria-label')).toBe('Violin: done');
+    expect(piano.classList.contains('done')).toBe(false);
+    expect(piano.textContent).toBe('🎹: 2');
+    expect(piano.hasAttribute('aria-label')).toBe(false);
+  });
+
+  test('updateObjectiveCounters removes the done state when an objective is not finished', () => {
+    const container = document.createElement('div');
+    const objectives = [{ label: 'violin', symbol: '🎻', count: 5 }];
+    updateObjectiveCounters(container, objectives, { violinLeft: 0 });
+    expect(container.querySelector('.done')).not.toBeNull();
+    // A new level (or a restart) renders the counters again with a full count
+    updateObjectiveCounters(container, objectives, { violinLeft: 5 });
+    expect(container.querySelector('.done')).toBeNull();
+    expect(container.children[0].textContent).toBe('🎻: 5');
+  });
+
   test('updateObjectiveCounters uses obj.count as fallback if state key missing', () => {
     const container = document.createElement('div');
     const objectives = [
