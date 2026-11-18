@@ -54,8 +54,8 @@
         <!-- HOME BOTTOM — scores and buttons -->
         <div class="home-bottom">
              <div class="score-group">
-                <div id="highScoreDisplay" class="high-score hidden" aria-live="polite" aria-label="High score">Best Score: 0</div>
-                <div id="highestLevelDisplay" class="highest-level hidden" aria-live="polite" aria-label="Highest level">Highest Level: 0</div>
+                <div id="highScoreDisplay" class="high-score hidden" aria-live="polite">Best Score: 0</div>
+                <div id="highestLevelDisplay" class="highest-level hidden" aria-live="polite">Highest Level: 0</div>
             </div>
             <div class="menu hidden" role="navigation" aria-label="Main Menu">
                 <button id="playBtn"><span class="menu-icon" aria-hidden="true">🎮</span>Play Game</button>
@@ -70,17 +70,17 @@
         <div id="game-board-container" class="hidden">
             <div id="score-moves-wrapper">
                 <div class="top-bar-custom">
-                    <div id="levelDisplay" class="hidden level-center" aria-live="polite" aria-label="Current level">LEVEL 1</div>
-                    <div id="livesDisplay" aria-live="polite" aria-label="Lives remaining"><span id="livesCount">5</span></div>
+                    <div id="levelDisplay" class="hidden level-center" aria-live="polite">LEVEL 1</div>
+                    <div id="livesDisplay" aria-live="polite"><span id="livesCount">5</span></div>
                     <button id="homeBtn" class="hidden home-btn"><span aria-hidden="true">🏠</span> Home</button>
                 </div>
                 <div id="objective-counters" aria-label="Objectives"></div>
                 <div class="moves-score-timer-row">
-                    <div id="movesDisplay" class="hidden moves-horizontal" aria-live="polite" aria-label="Moves remaining">Moves: 0</div>
-                    <div id="scoreDisplay" class="hidden score-horizontal" aria-live="polite" aria-label="Current score">Score: 0</div>
-                    <div id="timerDisplay" class="hidden timer-horizontal" aria-live="polite" aria-label="Timer">Time: 0s</div>
+                    <div id="movesDisplay" class="hidden moves-horizontal" aria-live="polite">Moves: 0</div>
+                    <div id="scoreDisplay" class="hidden score-horizontal" aria-live="polite">Score: 0</div>
+                    <div id="timerDisplay" class="hidden timer-horizontal" aria-live="polite">Time: 0s</div>
                 </div>
-                <div id="totalScoreDisplay" class="hidden total-score" aria-live="polite" aria-label="Total score">Total Score: 0</div>
+                <div id="totalScoreDisplay" class="hidden total-score" aria-live="polite">Total Score: 0</div>
             </div>
             <div id="game-board-wrapper">
                 <div id="gameBoard" role="grid" aria-label="Game board"></div>
@@ -93,8 +93,8 @@
                 <button id="closeRestartModal" class="close" aria-label="Close">&times;</button>
                 <h2>Restart Level?</h2>
                 <p>Are you sure you want to restart this level?</p>
-                <button id="confirmRestartBtn" aria-label="Yes, Restart">Yes, Restart</button>
-                <button id="cancelRestartBtn" aria-label="Cancel">Cancel</button>
+                <button id="confirmRestartBtn">Yes, Restart</button>
+                <button id="cancelRestartBtn">Cancel</button>
             </div>
         </div>
 
@@ -105,8 +105,8 @@
                 <h2>Level Complete!</h2>
                 <p>Congratulations! Ready for the next challenge?</p>
                 <p id="levelBonus" class="level-bonus"></p>
-                <button id="confirmNextLevelBtn" aria-label="Next Level">Next Level</button>
-                <button id="cancelNextLevelBtn" aria-label="Cancel">Cancel</button>
+                <button id="confirmNextLevelBtn">Next Level</button>
+                <button id="cancelNextLevelBtn">Cancel</button>
             </div>
         </div>
 
@@ -117,8 +117,8 @@
                 <p>You've run out of lives!</p>
                 <p id="gameOverFinalScore" style="font-size: 1.3em; font-weight: 600; color: #6c5ce7; margin: 15px 0;">Total Score: 0</p>
                 <p id="gameOverNewBest" class="new-best hidden">New best score!</p>
-                <button id="gameOverPlayAgainBtn" aria-label="Play Again">Play Again</button>
-                <button id="gameOverHomeBtn" aria-label="Home">Home</button>
+                <button id="gameOverPlayAgainBtn">Play Again</button>
+                <button id="gameOverHomeBtn">Home</button>
             </div>
         </div>
 
@@ -131,8 +131,8 @@
                 <p id="congratsBonus" class="level-bonus"></p>
                 <p id="congratsNewBest" class="new-best hidden">New best score!</p>
                 <p>Would you like to play again or go back to the home screen?</p>
-                <button id="congratsPlayAgainBtn" aria-label="Play Again">Play Again</button>
-                <button id="congratsHomeBtn" aria-label="Home">Home</button>
+                <button id="congratsPlayAgainBtn">Play Again</button>
+                <button id="congratsHomeBtn">Home</button>
             </div>
         </div>
 
@@ -160,8 +160,8 @@
                 <button id="closeConfirmHomeModal" class="close" aria-label="Close">&times;</button>
                 <h2 id="confirmHomeTitle">Return to Home?</h2>
                 <p>Are you sure you want to save the game and return later?</p>
-                <button id="confirmHomeBtn" aria-label="Yes, Save and Return">Yes, Save and Return</button>
-                <button id="cancelHomeBtn" aria-label="Cancel">Cancel</button>
+                <button id="confirmHomeBtn">Yes, Save and Return</button>
+                <button id="cancelHomeBtn">Cancel</button>
             </div>
         </div>
 
@@ -170,8 +170,8 @@
             <div class="modal-content" style="text-align:center;">
                 <h2 id="otherTabTitle">Game changed in another tab</h2>
                 <p>This game was changed in another tab.</p>
-                <button id="otherTabUseThisBtn" aria-label="Use this tab">Use this tab</button>
-                <button id="otherTabGoHomeBtn" aria-label="Go home">Go home</button>
+                <button id="otherTabUseThisBtn">Use this tab</button>
+                <button id="otherTabGoHomeBtn">Go home</button>
             </div>
         </div>
 
